@@ -1,0 +1,40 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="application.listExample" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="List Example">
+		<content>
+
+			<!-- Best practice notes -->
+			<Panel expandable="true" expanded="true">
+				<headerToolbar>
+      		<Toolbar height="3rem">
+        		<Text text="Best Practice"/>
+      		</Toolbar>
+    		</headerToolbar>
+				<content>
+					<VBox>
+						<items>
+							<Text text="This project provides examples and best practice on how to create a mobile list."/>
+							<Text text="Dos and dont's:"/>
+						</items>
+					</VBox>
+				</content>
+			</Panel>
+
+			<!-- Examples-->
+			<Panel expandable="true" expanded="true" class="listExample">
+				<headerToolbar>
+      		<Toolbar height="3rem">
+        		<Text text="Examples"/>
+      		</Toolbar>
+    		</headerToolbar>
+				<content>
+					<List items="{exampleList>/data}" noDataText="No items">
+            <items>
+              <ObjectListItem title="{exampleList>title}" number="{exampleList>number}" type="Active" press="onItemPress">
+              </ObjectListItem>
+            </items>
+          </List>
+				</content>
+			</Panel>
+    </content>
+  </Page>
+</core:View>
