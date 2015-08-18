@@ -12,8 +12,11 @@
 				<content>
 					<VBox>
 						<items>
-							<Text text="This project provides examples and best practice on how to create a mobile list."/>
+							<Text text="This project provides a best practice example on how to create a list using the mobile control. The type of list item can be swapped in and out for any of the other types."/>
 							<Text text="Dos and dont's:"/>
+							<Text text="Do set the select event on the list. This will provide the context for the selected item in the controller."/>
+							<Text text="Do set the mode to SingleSelectMaster, this will give you the highlighting on the selected item."/>
+							<Text text="Don't set the press event on the list item, it's not required."/>
 						</items>
 					</VBox>
 				</content>
@@ -27,9 +30,9 @@
       		</Toolbar>
     		</headerToolbar>
 				<content>
-					<List items="{exampleList>/data}" noDataText="No items">
+					<List items="{exampleList>/data}" noDataText="No items" select="onItemPress" mode="SingleSelectMaster">
             <items>
-              <ObjectListItem title="{exampleList>title}" number="{exampleList>number}" type="Active" press="onItemPress">
+              <ObjectListItem title="{exampleList>title}" number="{exampleList>number}">
               </ObjectListItem>
             </items>
           </List>
