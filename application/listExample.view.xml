@@ -49,10 +49,10 @@
       		</Toolbar>
     		</headerToolbar>
 				<content>
-					<List noDataText="No items" mode="SingleSelectMaster">
+					<List noDataText="No items">
             <items>
-              <ObjectListItem title="List Item 1" press="onThisParticularItemPress"></ObjectListItem>
-							<ObjectListItem title="List Item 2" press="onThatParticularItemPress"></ObjectListItem>
+              <ObjectListItem title="List Item 1" type="Active" press="onThisParticularItemPress"></ObjectListItem>
+							<ObjectListItem title="List Item 2" type="Active" press="onThatParticularItemPress"></ObjectListItem>
             </items>
           </List>
 				</content>
