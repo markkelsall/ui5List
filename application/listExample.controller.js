@@ -11,5 +11,13 @@ sap.ui.controller("application.listExample", {
 	onItemPress : function (evt) {
 		var selectedItem = evt.getSource().getSelectedItem().getBindingContext("exampleList").getObject();
 		console.log("selected: " + selectedItem.title);
+	},
+
+	onThisParticularItemPress : function () {
+		console.log("do something for this particular item");
+	},
+
+	onThatParticularItemPress : function () {
+		console.log("do something for that particular item");
 	}
 });

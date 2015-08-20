@@ -13,6 +13,8 @@
 					<VBox>
 						<items>
 							<Text text="This project provides a best practice example on how to create a list using the mobile control. The type of list item can be swapped in and out for any of the other types."/>
+							<Text text="Example 1 shows a list being bound to an array in the model"/>
+							<Text text="Example 2 shows a static list with hard coded options, because sometimes you need that."/>
 							<Text text="Dos and dont's:"/>
 							<Text text="Do set the select event on the list. This will provide the context for the selected item in the controller."/>
 							<Text text="Do set the mode to SingleSelectMaster, this will give you the highlighting on the selected item."/>
@@ -22,11 +24,11 @@
 				</content>
 			</Panel>
 
-			<!-- Examples-->
-			<Panel expandable="true" expanded="true" class="listExample">
+			<!-- Example 1-->
+			<Panel expandable="true" expanded="false" class="listExample">
 				<headerToolbar>
       		<Toolbar height="3rem">
-        		<Text text="Examples"/>
+        		<Text text="Example 1"/>
       		</Toolbar>
     		</headerToolbar>
 				<content>
@@ -34,6 +36,23 @@
             <items>
               <ObjectListItem title="{exampleList>title}" number="{exampleList>number}">
               </ObjectListItem>
+            </items>
+          </List>
+				</content>
+			</Panel>
+
+			<!-- Example 2-->
+			<Panel expandable="true" expanded="false" class="listExample">
+				<headerToolbar>
+      		<Toolbar height="3rem">
+        		<Text text="Example 2"/>
+      		</Toolbar>
+    		</headerToolbar>
+				<content>
+					<List noDataText="No items" mode="SingleSelectMaster">
+            <items>
+              <ObjectListItem title="List Item 1" press="onThisParticularItemPress"></ObjectListItem>
+							<ObjectListItem title="List Item 2" press="onThatParticularItemPress"></ObjectListItem>
             </items>
           </List>
 				</content>
